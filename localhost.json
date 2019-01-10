@@ -1,0 +1,42 @@
+[
+{"type":"header","version":"4.8.3","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"mydb"},
+{"type":"table","name":"tasks","database":"mydb","data":
+[
+{"id":"1","task":"Find bugs","status":"1","created_at":"2016-04-10 23:50:40"},
+{"id":"2","task":"Review code","status":"1","created_at":"2016-04-10 23:50:40"},
+{"id":"3","task":"Fix bugs","status":"1","created_at":"2016-04-10 23:50:40"},
+{"id":"5","task":"Push to prod","status":"1","created_at":"2016-04-10 23:50:50"},
+{"id":"6","task":"singing","status":"0","created_at":"2019-01-08 21:50:18"},
+{"id":"7","task":"danceing","status":"1","created_at":"2019-01-08 22:12:18"},
+{"id":"8","task":"Asd","status":"1","created_at":"2019-01-09 01:19:41"}
+]
+}
+{"type":"database","name":"shopping"},
+,{"type":"table","name":"users","database":"shopping","data":
+[
+{"id":"1","email":"rushi","password":"123","createdAt":"2019-01-10 07:56:21","updatedAt":"2019-01-10 09:17:17"},
+{"id":"3","email":"rushita","password":"123","createdAt":"2019-01-10 07:56:27","updatedAt":"2019-01-10 07:56:27"},
+{"id":"4","email":"rushita","password":"123","createdAt":"2019-01-10 07:56:27","updatedAt":"2019-01-10 07:56:27"},
+{"id":"5","email":"rushita","password":"123","createdAt":"2019-01-10 07:56:27","updatedAt":"2019-01-10 07:56:27"}
+]
+}
+{"type":"database","name":"shoppingDb"},
+,{"type":"table","name":"categories","database":"shoppingDb","data":
+[
+{"cat_id":"1","cat_name":"food","cat_created_date":"2019-01-09 20:57:26","cat_created_by":"","cat_deleted_date":"2019-01-09 20:57:26","cat_deleted_by":"","cat_updated_date":"2019-01-09 20:57:26","cat_updated_by":"","cat_isdeleted":"0"}
+]
+}
+,{"type":"table","name":"user","database":"shoppingDb","data":
+[
+{"user_id":"1","user_name":"rushita","user_address":"surat","user_age":"20","user_phone":"12345678","user_email":"rushita@gmail.com","user_password":"123","user_created_date":"","user_created_by":"rushita","user_deleted_date":"","user_deleted_by":"","user_updated_date":"","user_updated_by":"","user_isdeleted":"0","user_type":"1"},
+{"user_id":"2","user_name":"rushita1","user_address":"surat","user_age":"2","user_phone":"7894563132","user_email":"rushita@gmail.com","user_password":"123456789","user_created_date":"2019-01-09 04:29:09.901","user_created_by":"rushita","user_deleted_date":"2019-01-09 04:29:09.901","user_deleted_by":"","user_updated_date":"2019-01-09 04:29:09.901","user_updated_by":"","user_isdeleted":"0","user_type":"1"},
+{"user_id":"3","user_name":"rushita1","user_address":"surat","user_age":"2","user_phone":"7894563132","user_email":"rushita@gmail.com","user_password":"123456789","user_created_date":"2019-01-09 04:33:42.676","user_created_by":"rushita","user_deleted_date":"2019-01-09 04:33:42.676","user_deleted_by":"","user_updated_date":"2019-01-09 04:33:42.676","user_updated_by":"","user_isdeleted":"0","user_type":"1"},
+{"user_id":"4","user_name":"rushita1","user_address":"surat","user_age":"2","user_phone":"7894563132","user_email":"rushita@gmail.com","user_password":"123456789","user_created_date":"2019-01-09 04:35:24.005","user_created_by":"rushita","user_deleted_date":"2019-01-09 04:35:24.005","user_deleted_by":"","user_updated_date":"2019-01-09 04:35:24.005","user_updated_by":"","user_isdeleted":"0","user_type":"1"},
+{"user_id":"5","user_name":"rushita1","user_address":"surat","user_age":"2","user_phone":"7894563132","user_email":"rushita@gmail.com","user_password":"123456789","user_created_date":"2019-01-09 04:36:01.698","user_created_by":"rushita","user_deleted_date":"2019-01-09 04:36:01.698","user_deleted_by":"","user_updated_date":"2019-01-09 04:36:01.698","user_updated_by":"","user_isdeleted":"0","user_type":"1"},
+{"user_id":"6","user_name":"rushita1","user_address":"surat","user_age":"2","user_phone":"7894563132","user_email":"rushita@gmail.com","user_password":"123456789","user_created_date":"2019-01-09 04:36:45.626","user_created_by":"rushita","user_deleted_date":"2019-01-09 04:36:45.626","user_deleted_by":"","user_updated_date":"2019-01-09 04:36:45.626","user_updated_by":"","user_isdeleted":"0","user_type":"1"},
+{"user_id":"7","user_name":"rushita1","user_address":"surat","user_age":"2","user_phone":"7894563132","user_email":"rushita@gmail.com","user_password":"123456789","user_created_date":"2019-01-09 04:38:32.281","user_created_by":"rushita","user_deleted_date":"2019-01-09 04:38:32.281","user_deleted_by":"","user_updated_date":"2019-01-09 04:38:32.281","user_updated_by":"","user_isdeleted":"0","user_type":"1"},
+{"user_id":"8","user_name":"rushita1","user_address":"surat","user_age":"2","user_phone":"7894563132","user_email":"rushita@gmail.com","user_password":"123456789","user_created_date":"2019-01-09 04:40:26.351","user_created_by":"rushita","user_deleted_date":"2019-01-09 04:40:26.351","user_deleted_by":"","user_updated_date":"2019-01-09 04:40:26.351","user_updated_by":"","user_isdeleted":"0","user_type":"1"}
+]
+}
+]
