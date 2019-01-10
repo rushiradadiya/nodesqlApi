@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>  hii
+    <script>
+        var inputValue = prompt("Enter String");
+        var arr = []
+        var reg = /^[0-9]/
+        var newarr =[];
+       // ('\\$[a-zA-z]')
+        var ans=""
+        var ans ;
+
+        for(var i=0 ;i<inputValue.length;i++)
+        {
+            var charvalue = inputValue[i].charCodeAt();
+            console.log(charvalue.charCodeAt);
+
+            if((charvalue>=97 && charvalue<=122 )||(charvalue>=65 && charvalue<=90 )||(charvalue>=91 && charvalue<=96 )||(charvalue>=123 && charvalue<=126 ) || (charvalue>=91 && charvalue<=96 )||(charvalue>=27 && charvalue<=67 ))
+
+            {
+
+                arr.push(inputValue[i])
+            }
+
+
+        }
+
+
+        for(var i=0 ,k=arr.length-1;i<arr.length;i++,k--)
+        {
+            var charvalue = inputValue[1].charCodeAt();
+            if((charvalue>=97 && charvalue<=122 )||(charvalue>=65 && charvalue<=90) )
+            {
+                newarr[k]=inputValue[i].toString();
+            }
+            else
+            {
+                newarr[i] = inputValue[i].toString();
+            }
+        }
+        for(var i=0 ;i<newarr.length;i++)
+        {
+            ans =ans+ "  " +newarr[i];
+            console.log(ans)
+        }
+        alert(ans)
+    </script>
+</body>
+</html>
+
+<!--reverse string only with alphabetic. except alphabetic all character must be persist its position-->
+<!--Input: str = "a,b$c"-->
+<!--Output: str = "c,b$a"-->
+<!--Note that $ and , are not moved anywhere.-->
+<!--Only subsequence "abc" is reversed-->
+
+<!--Input: str = "Ab,c,de!$"-->
+<!--Output: str = "ed,c,bA!$"-->

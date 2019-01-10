@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var inputvalue=prompt("enter string")
+    var arr = []
+
+    console.log(arr)
+    var newarr =[]
+    var newans ="";
+    for(var i=0;i<inputvalue.length;i++)
+    {
+        for (var j=inputvalue.length ;j<i;j++)
+        {
+            /* nitin
+             n i t i n
+             n iti n
+
+
+             geek
+             g e e k s
+             g ee k s
+            * */
+            if(inputvalue[i-1]==inputvalue[j-1])
+            {
+                newarr[i] = inputvalue[i]
+                newarr[j] =inputvalue[j]
+                var ans = newarr[i]+newarr[j]
+               if(ans==ans.reverse())
+               {
+                   newarr[i] = ans
+                    console.log()
+               }
+            }
+            else
+            {
+                newarr[i] = inputvalue[i]
+                newarr[j] =inputvalue[j]
+            }
+        }
+        for (var i=0 ;i<newarr.length;i++)
+        {
+            newans =newans + newarr[i] + " "
+        }
+        console.log(newans)
+    }
+
+</script>
+</body>
+</html>
