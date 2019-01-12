@@ -1,17 +1,13 @@
 const Sequelize = require('sequelize');
 const {db} = require('../config/database');
 
-const User = db.define('user',{
+const categories = db.define('categories',{
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    email: {
-        type: Sequelize.STRING,
-        allowNull: false
-    },
-    password: {
+    name: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -21,11 +17,11 @@ const User = db.define('user',{
     },
 });
 
-User.sync({force: false}).then((res) => {
-    console.log('User Table Created Successfully');
+categories.sync({force: false}).then((res) => {
+    console.log('categories Table Created Successfully');
 }).catch((err) => {
 
-    console.log('Error While Creating User Table');
+    console.log('Error While Creating categories Table');
 })
 
-module.exports = User;
+module.exports = categories;
