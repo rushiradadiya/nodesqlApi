@@ -15,6 +15,24 @@ const categories = db.define('categories',{
         type: Sequelize.BOOLEAN,
         defaultValue:false
     },
+    created_by: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    updated_by: {
+        type: Sequelize.INTEGER,
+        allowNull: false
+    },
+    deletedAt: {
+        type: Sequelize.STRING,
+        allowNull: false
+        
+    },
+    deleted_by: {
+        type: Sequelize.STRING,
+        allowNull: false
+       
+    }
 });
 
 categories.sync({force: false}).then((res) => {

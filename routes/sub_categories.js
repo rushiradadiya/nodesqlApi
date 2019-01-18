@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const subcat=require('../controller/sub_categoriescontroller')
 
-debugger;
+
 router.post('/',subcat.addCategories);
 router.get('/',subcat.getCategories)
 router.get('/:categoriesId', subcat.findById);

@@ -72,3 +72,21 @@ exports.findById = (req, res) => {
         }
     })
 };
+
+
+//Login Here
+exports.signIn = (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+    User.findOne({where:{email: email,password:password}}).then((result) => {
+        if(result) {
+            console.log(result)
+            res.status(200).send(result);
+        } else {
+            console.log("data not exits")
+            res.send("data not exits");
+        }
+    }).catch((err)=>{
+
+    })
+};

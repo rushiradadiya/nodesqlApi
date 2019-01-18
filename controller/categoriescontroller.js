@@ -1,4 +1,4 @@
-const Categories=require('.././schema/sub_categoriesSchema');
+const Categories=require('.././schema/categoriesSchema');
 
     exports.addCategories = (req, res) => {
     debugger;
@@ -38,7 +38,7 @@ exports.update = (req, res) => {
         if(!result) {
             res.status(404).send({message: ' Data not Exist'});
         } else {
-            Categories.update({name: req.body.email},
+            Categories.update({name: req.body.name},
                 {where: {id: req.params.categoriesId}}
             ).then(() => {
                 res.status(200).send("updated successfully a categories with id = " + id);
