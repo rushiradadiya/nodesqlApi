@@ -40,7 +40,8 @@ const User = db.define('user',{
         defaultValue:false
     },
     isActive: {
-      ç
+        type: Sequelize.BOOLEAN,
+        defaultValue:false
     },
     created_by: {
         type: Sequelize.STRING,

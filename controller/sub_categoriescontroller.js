@@ -84,3 +84,13 @@ exports.findById = (req, res) => {
         }
     })
 };
+exports.findByCatId = (req, res) => {
+    Sub_Categories.findAll({where:{cid: req.params.categoriesId,isActive:false}}).then((result) => {
+        if(!result){
+            res.status(404).send({result});
+        }
+        else {
+            res.status(200).send(result);
+        }
+    })
+};

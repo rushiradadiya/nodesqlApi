@@ -6,7 +6,7 @@ exports.uploadProduct = (req, res) => {
     const {body:{name,cid,scid,image,price,qty,detail}} = req;
 
     if(res) {
-        let product= {
+        let newproduct= {
             name,
             cid,
             scid,
@@ -16,8 +16,8 @@ exports.uploadProduct = (req, res) => {
             detail
         };
 
-        product.create(newProduct)
-            .then(() => res.send({newProduct}))
+        Product.create(newproduct)
+            .then(() => res.send({newproduct}))
             .catch((error) => {
                 console.log(error)
                 return res.status(500).send(error)

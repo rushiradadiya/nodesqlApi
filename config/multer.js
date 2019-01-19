@@ -18,30 +18,3 @@ const storage = storageDest =>multer.diskStorage({
 const upload = storageDest=>multer({ storage: storage(storageDest) });
 console.log(upload)
 module.exports = upload
-
-
-
-
-
-
-/*
-var multer = require('multer');
-let UPLOAD_PATH = 'public';
-/**
- *
- * @type {DiskStorage}
- */
-
-/*var storage = storageDest => multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, storageDest)
-    },
-    filename: function (req, file, cb) {
-        cb(null, file.fieldname + '-' + Date.now() + '.jpg')
-    }
-})
-const upload = storageDest => multer({ storage: storage(storageDest) })
-
-module.exports = upload
-
- */
