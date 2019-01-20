@@ -1,5 +1,6 @@
 const Product=require('../schema/productSchema');
 let UPLOAD_PATH = 'public/ProductImages';
+const Path =require('path')
 
 exports.uploadProduct = (req, res) => {
     console.log("enter in post-------------",{req})
@@ -42,12 +43,12 @@ exports.uploadProduct = (req, res) => {
 };
 
 
-
-
 exports.getProduct= (req,res) => {
     debugger;
-    Product.findAll({ where: {isActive:false}})
+    Product.findAll({ where: {isactive:false}})
         .then((result) => {
+        console.log(result)
+
             if(!result){
                 res.status(404).send({result});
             }else {
@@ -102,7 +103,7 @@ exports.deletedata = (req, res) => {
 
 };
 exports.findById = (req, res) => {
-    Product.findOne({where:{id: req.params.productId,isActive:false}}).then((result) => {
+    Product.findOne({where:{image: req.params.productId,isActive:false}}).then((result) => {
         if(!result){
             res.status(404).send("Data not found");
         }
