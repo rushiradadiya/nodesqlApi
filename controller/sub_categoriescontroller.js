@@ -94,7 +94,7 @@ exports.findByCatId = (req, res) => {
             res.status(404).send({result});
         }
         else {
-            res.status(200).send(result);
+            res.status(200).send({result});
         }
     })
 };

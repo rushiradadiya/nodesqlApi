@@ -91,7 +91,7 @@ exports.findById = (req, res) => {
             res.status(404).send("Data not found");
         }
         else {
-            res.status(200).send(result);
+            res.status(200).send({result});
         }
     })
 };
@@ -101,6 +101,7 @@ exports.findBysubcatId = (req, res) => {
             res.status(404).send("Data not found");
         }
         else {
+            console.log(result)
             res.status(200).send({result});
         }
     })
