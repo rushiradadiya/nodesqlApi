@@ -16,26 +16,30 @@ const sub_categories = db.define('sub_categories',{
         type: Sequelize.STRING,
         allowNull: false
     },
+    image:{
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
     isActive: {
         type: Sequelize.BOOLEAN,
         defaultValue:false
     },
     created_by: {
         type: Sequelize.STRING,
-        allowNull: false
+        // allowNull: false
     },
     updated_by: {
         type: Sequelize.INTEGER,
-        allowNull: false
+        // allowNull: false
     },
     deletedAt: {
         type: Sequelize.STRING,
-        allowNull: false
+        // allowNull: false
         
     },
     deleted_by: {
         type: Sequelize.STRING,
-        allowNull: false
+       // allowNull: false
         
     }
 });

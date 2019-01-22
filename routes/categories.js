@@ -6,7 +6,7 @@ const upload = require('../config/multer');
 let UPLOAD_PATH = 'public/categoryImage';
 
 
-router.post('/', upload(UPLOAD_PATH).single('image'),product.addCategories);
+router.post('/', upload(UPLOAD_PATH).single('image'),cat.uploadProduct);
 router.get('/',cat.getCategories)
 router.get('/:categoriesId', cat.findById);
 router.put('/:categoriesId',cat.update)

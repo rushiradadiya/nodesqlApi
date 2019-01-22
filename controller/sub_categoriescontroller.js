@@ -1,21 +1,25 @@
 const Sub_Categories=require('.././schema/sub_categoriesSchema');
+let UPLOAD_PATH = 'public/subCategoryImage';
 
-    exports.addCategories = (req, res) => {
-    debugger;
-        Sub_Categories.create(req.body)
-        .then((result) =>{
-            if(result) {
-                res.status(200).send({result});
-            }
-            else
-            {
-                res.status(404).send("data not found")
-            }
-        }).catch((err)=>{
-        res.status(400).send(err +" Table Not Created")
-    })
+exports.uploadSubCat = (req, res) => {
+    console.log("enter in post-------------",{req})
+    const {body:{name,cid}} = req;
+
+    if(res) {
+        let newproduct= {
+            name,
+            cid,
+            image: req.file && (UPLOAD_PATH+'/'+req.file.filename),
+        };
+
+        Sub_Categories.create(newproduct)
+            .then(() => res.send({newproduct}))
+            .catch((error) => {
+                console.log(error)
+                return res.status(500).send(error)
+            });
+    }
 };
-
 
 exports.getCategories= (req,res) => {
     debugger;
@@ -80,7 +84,7 @@ exports.findById = (req, res) => {
             res.status(404).send("Data not found");
         }
         else {
-            res.status(200).send(result);
+            res.status(200).send({result});
         }
     })
 };

@@ -8,6 +8,7 @@ let UPLOAD_PATH = 'public/ProductImages';
 router.post('/', upload(UPLOAD_PATH).single('image'),product.uploadProduct);
 router.get('/',product.getProduct)
 router.get('/:productId', product.findById);
+router.get('/subcat/:productId',product.findBysubcatId)
 router.put('/:productId',product.update)
 router.delete('/:productId', product.deletedata);
 module.exports = router;

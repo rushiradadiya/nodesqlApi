@@ -1,21 +1,23 @@
 const Categories=require('.././schema/categoriesSchema');
+let UPLOAD_PATH = 'public/categoryImage';
+exports.uploadProduct = (req, res) => {
+    console.log("enter in post-------------",{req})
+    const {body:{name}} = req;
 
-    exports.addCategories = (req, res) => {
-    debugger;
-    Categories.create(req.body)
-        .then((result) =>{
-            if(result) {
-                res.status(200).send({result});
-            }
-            else
-            {
-                res.status(404).send("data not found")
-            }
-        }).catch((err)=>{
-        res.status(400).send(err +" Table Not Created")
-    })
+    if(res) {
+        let newproduct= {
+            name,
+            image: req.file && (UPLOAD_PATH+'/'+req.file.filename),
+        };
+
+        Categories.create(newproduct)
+            .then(() => res.send({newproduct}))
+            .catch((error) => {
+                console.log(error)
+                return res.status(500).send(error)
+            });
+    }
 };
-
 
 exports.getCategories= (req,res) => {
     debugger;

@@ -26,23 +26,6 @@ exports.uploadProduct = (req, res) => {
     }
 };
 
-    exports.addProduct = (req, res) => {
-    debugger;
-    Product.create(req.body)
-        .then((result) =>{
-            if(result) {
-                res.status(200).send({result});
-            }
-            else
-            {
-                res.status(404).send("data not found")
-            }
-        }).catch((err)=>{
-        res.status(400).send(err +" Table Not Created")
-    })
-};
-
-
 exports.getProduct= (req,res) => {
     debugger;
     Product.findAll({ where: {isactive:false}})
@@ -103,7 +86,7 @@ exports.deletedata = (req, res) => {
 
 };
 exports.findById = (req, res) => {
-    Product.findOne({where:{image: req.params.productId,isActive:false}}).then((result) => {
+    Product.findOne({where:{id: req.params.productId,isActive:false}}).then((result) => {
         if(!result){
             res.status(404).send("Data not found");
         }
@@ -112,4 +95,13 @@ exports.findById = (req, res) => {
         }
     })
 };
-
+exports.findBysubcatId = (req, res) => {
+    Product.findAll({where:{scid: req.params.productId,isActive:false}}).then((result) => {
+        if(!result){
+            res.status(404).send("Data not found");
+        }
+        else {
+            res.status(200).send({result});
+        }
+    })
+};

@@ -12,6 +12,9 @@ const {db} = require('./config/database');
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public/ProductImages/')));
+app.use(express.static(path.join(__dirname, 'public/categoryImage/')));
+app.use(express.static(path.join(__dirname, 'public/subCategoryImage/')));
+
 
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({extended: false}));
