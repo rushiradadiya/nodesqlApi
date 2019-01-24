@@ -5,7 +5,6 @@ const Path =require('path')
 exports.uploadProduct = (req, res) => {
     console.log("enter in post-------------",{req})
     const {body:{name,cid,scid,image,price,qty,detail}} = req;
-
     if(res) {
         let newproduct= {
             name,
